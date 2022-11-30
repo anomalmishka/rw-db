@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>MyProject</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--My CSS-->
+    <link rel="stylesheet" type="text/css" href="http://localhost:8001/web-app/templates/content/css/main/style.css">
+    <link rel="stylesheet" type="text/css"
+          href="http://localhost:8001/web-app/templates/content/css/clock/style.css">
+</head>
+<body class="background-image-home" onload="clockTimer();">
+<main>
+    <header th:replace="fragments/header :: header"></header>
+    <div class="container-fluid">
+        <div class="row footer">
+        </div>
+                <div class="row">
+                    <div class="col to-center">
+                        <table cellspacing="2" border="1" cellpadding="5">
+                            <tbody th:each="user : ${userPrincipalName}">
+                            <tr>
+                                <td><span>Login:</span></td>
+                                <td><span th:text="${user}"></span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+        <div class="row align-items-start">
+            <div class="col-lg-2 align-self-end">
+                <div class="clockpage">
+                    <span id="clock"></span>
+                    <span id="dayOfWeek"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="http://localhost:8001/web-app/templates/content/css/clock/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<div th:fragment="header">
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="http://localhost:8001/web-app/">Yazvinski</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+<!--            <ul class="navbar-nav mr-auto">-->
+<!--            </ul>-->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item"
+                           href="http://localhost:8001/web-app/admin/block/user">Block/unblock User</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profile
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="http://localhost:8001/web-app/login">Login</a>
+                        <a class="dropdown-item" href="http://localhost:8001/web-app/registration">Registration</a>
+                        <a class="dropdown-item" href="http://localhost:8001/web-app/restore/password">Restore
+                            password</a>
+                        <a class="dropdown-item" href="http://localhost:8001/web-app/profile">Edit profile</a>
+                        <a class="dropdown-item" href="http://localhost:8001/web-app/profile/passenger">Edit
+                            passanger</a>
+                        <a class="dropdown-item" href="http://localhost:8001/web-app/logout">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<!--                <li class="nav-item active">-->
+<!--                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" href="#">Link</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link disabled" href="#">Disabled</a>-->
+<!--                </li>-->

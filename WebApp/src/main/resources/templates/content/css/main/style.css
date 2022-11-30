@@ -1,0 +1,35 @@
+.background-image-home {
+background-image: linear-gradient(to right, rgba(255,255,255, 0.4) 0 100%), url(http://localhost:8001/web-app/templates/content/images/win10paper.jpeg);
+background-attachment:fixed;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.footer {
+height:56px;
+margin:0;
+}
+.top-step {
+height:50px;
+margin:0;
+}
+.text-area-width {
+width: 100px;
+margin:0;
+}
+.to-center {
+  text-align: center;
+}
+table {
+margin: 0 auto;
+}
+input {
+background: transparent;
+width: 200px;
+font-size: 1.5em; /* 40px/16=2.5em */
+}
+th {
+text-align: center;
+}
+td {
+text-align: center;
+}

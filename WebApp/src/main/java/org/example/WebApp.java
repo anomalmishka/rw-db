@@ -1,11 +1,11 @@
-package org.project;
+package org.example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DataBase {
+public class WebApp {
     public static void main(String[] args) {
-        SpringApplication.run(DataBase.class, args);
+        SpringApplication.run(WebApp.class, args);
     }
 }

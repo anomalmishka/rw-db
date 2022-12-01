@@ -1,0 +1,871 @@
+{
+	"info": {
+		"_postman_id": "59efaf19-b691-40e5-ba66-eed8c1513401",
+		"name": "rw.by",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20109645"
+	},
+	"item": [
+		{
+			"name": "L1",
+			"item": [
+				{
+					"name": "userProfile",
+					"item": [
+						{
+							"name": "user/profile/read/all",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8003/database/user/profile/read/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8003",
+									"path": [
+										"database",
+										"user",
+										"profile",
+										"read",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user/profile/read/2/",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8003/database/user/profile/read/2/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8003",
+									"path": [
+										"database",
+										"user",
+										"profile",
+										"read",
+										"2",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user/profile/read/all/id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[1,2,10]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8003/database/user/profile/read/all/id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8003",
+									"path": [
+										"database",
+										"user",
+										"profile",
+										"read",
+										"all",
+										"id"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user/profile/create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "id",
+										"value": "2",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"profilename\": \"User\",\r\n    \"lastname\": \"User\",\r\n    \"phone\": 22222222,\r\n    \"email\": \"user@gmail.com\",\r\n    \"isBlockedProfile\": false,\r\n    \"userId\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8003/database/user/profile/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8003",
+									"path": [
+										"database",
+										"user",
+										"profile",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user/profile/update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 3,\r\n    \"profilename\": \"User\",\r\n    \"lastname\": \"User\",\r\n    \"phone\": 22222222,\r\n    \"email\": \"user@gmail.com\",\r\n    \"isBlockedProfile\": false,\r\n    \"userId\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8003/database/user/profile/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8003",
+									"path": [
+										"database",
+										"user",
+										"profile",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user/profile/delete/1/",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8003/database/user/profile/delete/4/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8003",
+									"path": [
+										"database",
+										"user",
+										"profile",
+										"delete",
+										"4",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user/profile/delete/all/id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[2,3]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8003/database/user/profile/delete/all/id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8003",
+									"path": [
+										"database",
+										"user",
+										"profile",
+										"delete",
+										"all",
+										"id"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "passengerProfile",
+					"item": [
+						{
+							"name": "passenger/profile/read/all",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8003/database/passenger/profile/read/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8003",
+									"path": [
+										"database",
+										"passenger",
+										"profile",
+										"read",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "passenger/profile/read/2/",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8003/database/passenger/profile/read/2/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8003",
+									"path": [
+										"database",
+										"passenger",
+										"profile",
+										"read",
+										"2",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "passenger/profile/read/all/id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[1,2,10]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8003/database/passenger/profile/read/all/id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8003",
+									"path": [
+										"database",
+										"passenger",
+										"profile",
+										"read",
+										"all",
+										"id"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "passenger/profile/create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "id",
+										"value": "2",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"passengername\": \"User\",\r\n        \"passengerlastname\": \"User\",\r\n        \"passportNumber\": \"KK1111111\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8003/database/passenger/profile/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8003",
+									"path": [
+										"database",
+										"passenger",
+										"profile",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "passenger/profile/update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 3,\r\n    \"passengername\": \"User\",\r\n    \"passengerlastname\": \"User\",\r\n    \"passportNumber\": \"KK1111111\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8003/database/passenger/profile/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8003",
+									"path": [
+										"database",
+										"passenger",
+										"profile",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "passenger/profile/delete/1/",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8003/database/passenger/profile/delete/7/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8003",
+									"path": [
+										"database",
+										"passenger",
+										"profile",
+										"delete",
+										"7",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "passenger/profile/delete/all/id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[5,6]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8003/database/passenger/profile/delete/all/id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8003",
+									"path": [
+										"database",
+										"passenger",
+										"profile",
+										"delete",
+										"all",
+										"id"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "L2",
+			"item": [
+				{
+					"name": "userProfile",
+					"item": [
+						{
+							"name": "modif/user/profile/read/all",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8003/database/modif/user/profile/read/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8003",
+									"path": [
+										"database",
+										"modif",
+										"user",
+										"profile",
+										"read",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "modif/user/profile/read/2/",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8003/database/modif/user/profile/read/2/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8003",
+									"path": [
+										"database",
+										"modif",
+										"user",
+										"profile",
+										"read",
+										"2",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "modif/user/profile/read/all/id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[1,2,10]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8003/database/modif/user/profile/read/all/id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8003",
+									"path": [
+										"database",
+										"modif",
+										"user",
+										"profile",
+										"read",
+										"all",
+										"id"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "modif/user/profile/create Copy",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "id",
+										"value": "2",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\r\n        \"profilename\": \"Admin\",\r\n        \"lastname\": \"Admin\",\r\n        \"phone\": 11111111,\r\n        \"email\": \"admin@gmail.com\",\r\n        \"isBlockedProfile\": false,\r\n        \"userId\": 1,\r\n        \"passengerProfileList\": [\r\n            {\r\n                \"passengername\": \"Admin\",\r\n                \"passengerlastname\": \"Admin\",\r\n                \"passportNumber\": \"KK0000000\"\r\n            }\r\n        ]\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8003/database/modif/user/profile/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8003",
+									"path": [
+										"database",
+										"modif",
+										"user",
+										"profile",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "modif/user/profile/update Copy",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 3,\r\n    \"profilename\": \"User\",\r\n    \"lastname\": \"User\",\r\n    \"phone\": 22222222,\r\n    \"email\": \"user@gmail.com\",\r\n    \"isBlockedProfile\": false,\r\n    \"userId\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8003/database/modif/user/profile/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8003",
+									"path": [
+										"database",
+										"modif",
+										"user",
+										"profile",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "modif/user/profile/delete/1/ Copy",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8003/database/modif/user/profile/delete/4/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8003",
+									"path": [
+										"database",
+										"modif",
+										"user",
+										"profile",
+										"delete",
+										"4",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "modif/user/profile/delete/all/id Copy",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[2,3]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8003/database/modif/user/profile/delete/all/id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8003",
+									"path": [
+										"database",
+										"modif",
+										"user",
+										"profile",
+										"delete",
+										"all",
+										"id"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "passengerProfile",
+					"item": [
+						{
+							"name": "modif/passenger/profile/read/all",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8003/database/modif/passenger/profile/read/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8003",
+									"path": [
+										"database",
+										"modif",
+										"passenger",
+										"profile",
+										"read",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "modif/passenger/profile/read/2/",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8003/database/modif/passenger/profile/read/2/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8003",
+									"path": [
+										"database",
+										"modif",
+										"passenger",
+										"profile",
+										"read",
+										"2",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "modif/passenger/profile/read/all/id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[1,2,10]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8003/database/modif/passenger/profile/read/all/id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8003",
+									"path": [
+										"database",
+										"modif",
+										"passenger",
+										"profile",
+										"read",
+										"all",
+										"id"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

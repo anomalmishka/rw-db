@@ -2,7 +2,7 @@
 <html lang="en">
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="iso-8859-1">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Edit passenger</title>
     <!-- Bootstrap CSS -->
@@ -32,8 +32,7 @@
                         <tr th:each="passenger : ${passengerProfilePageList}"
                             th:with="baseUrl=('/order/')">
                             <td>
-                                <a th:href="@{${baseUrl}+${passenger.id}}"
-                                   th:text="${passenger.id}"></a>
+                                <input th:value="${passenger.id}" disabled>
                             </td>
                             <td>
                                 <input th:value="${passenger.passengername}" disabled>

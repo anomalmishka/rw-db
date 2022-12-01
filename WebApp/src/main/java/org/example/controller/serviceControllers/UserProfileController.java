@@ -45,6 +45,7 @@ public class UserProfileController {
     @GetMapping("/profile/passenger")
     public String getPassengerProfile(Model model, Principal principal) {
         List<PassengerProfilePage> passengerProfilePageList = passengerProfileMapperPage.toPage(passengerProfileCustomService.getPassanger(principal));
+        System.out.println(passengerProfilePageList);
         model.addAttribute("passengerProfilePageList", passengerProfilePageList);
         return "pages/userProfile/passengerProfile";
     }

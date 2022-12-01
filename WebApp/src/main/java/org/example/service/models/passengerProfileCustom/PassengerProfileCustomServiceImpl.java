@@ -6,7 +6,6 @@ import org.example.dto.models.L2.PassengerProfileDTOL2;
 import org.example.dto.models.L2.UserProfileDTOL2;
 import org.example.mapper.page.PassengerProfileMapper;
 import org.example.model.UserLogin;
-import org.example.service.models.encoder.EncoderService;
 import org.example.service.models.userLoginCustom.UserLoginCustomService;
 import org.example.service.models.userProfileCustom.UserProfileCustomService;
 import org.example.service.models.userProfilePage.UserProfilePageService;
@@ -22,7 +21,6 @@ public class PassengerProfileCustomServiceImpl implements PassengerProfileCustom
     private final UserLoginCustomService userLoginCustomService;
     private final UserProfileCustomService userProfileCustomService;
     private final PassengerProfileMapper passengerProfileMapper;
-    private final EncoderService encoderService;
 
     @Override
     public List<PassengerProfileDTOL2> create(PassengerProfileDTOL2 passengerProfileDTOL2, Principal principal) {
@@ -45,7 +43,6 @@ public class PassengerProfileCustomServiceImpl implements PassengerProfileCustom
         Long loginId = userLogin.getId();
         UserProfileDTOL2 userProfileDTOL2 = userProfileCustomService.findWhereUserId(loginId);
         List<PassengerProfileDTOL1> passengerProfileList = userProfileDTOL2.getPassengerProfileList();
-//        passengerProfileList.forEach(encoderService::toUTF_8);
         return passengerProfileMapper.toL2(passengerProfileList);
     }
 

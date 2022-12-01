@@ -41,4 +41,4 @@ hs_err_pid*
 replay_pid*
 /DataBase/target/
 /WebApp/target/
-
+/web-db/data/

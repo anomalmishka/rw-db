@@ -1,0 +1,53 @@
+version: '3.3'
+
+services:
+  database:
+    container_name: mySQL
+#    restart: on-failure
+    image: mysql
+    env_file:
+      - web-db/database.env
+    volumes:
+      - ./web-db/secure.sql:/docker-entrypoint-initdb.d/secure.sql
+      - ./web-db/data.sql:/docker-entrypoint-initdb.d/data.sql
+      - ./web-db/data:/var/lib/mysql/
+    ports:
+      - "3307:3306"
+
+
+  data-base:
+    container_name: database
+    build: ./database
+    image: database:database
+    ports:
+      - "8003:8003"
+    environment:
+      DB_URL: jdbc:mysql://mySQL:3306/test
+      DB_DRIVER: com.mysql.cj.jdbc.Driver
+      DB_USERNAME: root
+      DB_PASSWORD: admin
+      DB_DIALECT: org.hibernate.dialect.MySQL8Dialect
+    #    restart: on-failure
+#    depends_on:
+#      - web-db
+ 
+  web-app:
+    container_name: webapp
+    build: ./webapp
+    image: web-app:web-app
+    ports:
+      - "8001:8001"
+    environment:
+      DATA_BASE_APP_URL: http://database:8003/database
+      DB_URL: jdbc:mysql://mySQL:3306/test
+      DB_DRIVER: com.mysql.cj.jdbc.Driver
+      DB_USERNAME: root
+      DB_PASSWORD: admin
+      DB_DIALECT: org.hibernate.dialect.MySQL8Dialect
+    depends_on:
+#      - web-db
+      - database
+#    restart: on-failure
+
+
+

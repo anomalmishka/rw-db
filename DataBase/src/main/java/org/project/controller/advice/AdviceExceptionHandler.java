@@ -25,7 +25,7 @@ public class AdviceExceptionHandler extends ResponseEntityExceptionHandler {
                 .error(text)
                 .httpStatus(httpStatus)
                 .timestamp(Timestamp.valueOf(LocalDateTime.now()))
-                .path("lib-db")
+                .path("database")
                 .build();
     }
 

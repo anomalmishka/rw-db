@@ -30,13 +30,9 @@ public class RegistrationController {
                                @ModelAttribute UserProfileDTOL2 userProfileDTOL2,
                                @ModelAttribute UserLoginDTO userLoginDTO
     ) {
-        System.out.println(userProfileDTOL2);
-        System.out.println(userLoginDTO);
         UserProfilePage userProfilePage = userProfileMapperPage.toPage(registrationUserLoginService.create(
-                userProfileDTOL2,
-                userLoginMapper.toModel(userLoginDTO)
+                userProfileDTOL2, userLoginMapper.toModel(userLoginDTO)
         ));
-        System.out.println(userProfilePage);
         model.addAttribute("userProfilePage", userProfilePage);
         model.addAttribute("userDTO", userLoginDTO);
         String redirectUrl = "http://localhost:8001/web-app/login";

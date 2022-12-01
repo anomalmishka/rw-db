@@ -1,6 +1,7 @@
 package org.example.service.models.registrationUserLogin;
 
 import lombok.RequiredArgsConstructor;
+import org.example.dto.models.L2.PassengerProfileDTOL2;
 import org.example.dto.models.L2.UserProfileDTOL2;
 import org.example.exception.ErrorInvalidData;
 import org.example.model.Authorities;

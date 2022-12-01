@@ -25,13 +25,13 @@ public class PassengerProfileMapperL2 {
                         .map(this::toDTO).collect(Collectors.toList())).orElse(null);
     }
 
-    public List<PassengerProfile> toModel(List<PassengerProfileDTOL2> passengerProfileDTOModifList) {
-        return Optional.ofNullable(passengerProfileDTOModifList)
+    public List<PassengerProfile> toModel(List<PassengerProfileDTOL2> passengerProfileDTOL2List) {
+        return Optional.ofNullable(passengerProfileDTOL2List)
                 .map(list -> list.stream()
                         .map(this::toModel).collect(Collectors.toList())).orElse(null);
     }
 
-    public PassengerProfile toModel(PassengerProfileDTOL2 passengerProfileDTOModif) {
-        return modelMapper.map(passengerProfileDTOModif, PassengerProfile.class);
+    public PassengerProfile toModel(PassengerProfileDTOL2 passengerProfileDTOL2) {
+        return modelMapper.map(passengerProfileDTOL2, PassengerProfile.class);
     }
 }

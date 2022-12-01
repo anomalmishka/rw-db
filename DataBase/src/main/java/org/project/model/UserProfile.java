@@ -32,6 +32,7 @@ public class UserProfile {
     @EqualsAndHashCode.Exclude
     @OneToMany(
             cascade = CascadeType.ALL,
+            fetch = FetchType.EAGER,
             mappedBy="userProfile"
     )
     private List<PassengerProfile> passengerProfileList;

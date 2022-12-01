@@ -37,7 +37,6 @@ public class UserProfileController {
     public String updateUserProfile(Model model,
                                     @ModelAttribute UserProfilePage userProfilePage, Principal principal
     ) {
-        System.out.println("userProfilePage update " + userProfilePage);
         UserProfilePage profilePage = userProfileMapperPage.toPage(userProfilePageService.updateProfile(userProfileMapperPage.toDTO(userProfilePage), principal));
         model.addAttribute("userProfilePage", userProfilePage);
         return "pages/userProfile/userProfile";

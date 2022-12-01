@@ -30,13 +30,13 @@ public class UserProfileServiceImpl implements UserProfileService {
     }
 
     @Override
-    public UserProfileDTOL2 create(UserProfileDTOL2 userProfileDTOL22) {
-        return userProfileRestTemlateService.create(userProfileDTOL22);
+    public UserProfileDTOL2 create(UserProfileDTOL2 userProfileDTOL2) {
+        return userProfileRestTemlateService.create(userProfileDTOL2);
     }
 
     @Override
-    public UserProfileDTOL2 update(UserProfileDTOL2 userProfileDTOL22) {
-        return userProfileRestTemlateService.update(userProfileDTOL22);
+    public UserProfileDTOL2 update(UserProfileDTOL2 userProfileDTOL2) {
+        return userProfileRestTemlateService.update(userProfileDTOL2);
     }
 
     @Override

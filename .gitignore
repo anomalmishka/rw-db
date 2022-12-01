@@ -7,8 +7,25 @@
 # BlueJ files
 *.ctxt
 
+**/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
 
 # Package Files #
 *.jar
@@ -24,3 +41,4 @@ hs_err_pid*
 replay_pid*
 /DataBase/target/
 /WebApp/target/
+

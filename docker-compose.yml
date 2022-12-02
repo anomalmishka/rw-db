@@ -14,7 +14,6 @@ services:
     ports:
       - "3307:3306"
 
-
   data-base:
     container_name: database
     build: ./database
@@ -28,8 +27,8 @@ services:
       DB_PASSWORD: admin
       DB_DIALECT: org.hibernate.dialect.MySQL8Dialect
     #    restart: on-failure
-#    depends_on:
-#      - web-db
+    depends_on:
+      - database
  
   web-app:
     container_name: webapp
@@ -45,8 +44,8 @@ services:
       DB_PASSWORD: admin
       DB_DIALECT: org.hibernate.dialect.MySQL8Dialect
     depends_on:
-#      - web-db
       - database
+      - data-base
 #    restart: on-failure
 
 

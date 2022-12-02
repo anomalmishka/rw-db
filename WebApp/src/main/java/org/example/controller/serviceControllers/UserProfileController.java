@@ -42,7 +42,7 @@ public class UserProfileController {
         return "pages/userProfile/userProfile";
     }
 
-    @GetMapping("/profile/passenger")
+    @GetMapping(value = "/profile/passenger", produces = "application/json;charset=utf-8")
     public String getPassengerProfile(Model model, Principal principal) {
         List<PassengerProfilePage> passengerProfilePageList = passengerProfileMapperPage.toPage(passengerProfileCustomService.getPassanger(principal));
         System.out.println(passengerProfilePageList);

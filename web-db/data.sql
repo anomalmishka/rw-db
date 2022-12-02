@@ -1,4 +1,4 @@
-SET NAMES utf8mb4;
+set names utf8mb4;
 create table passenger_profile (
     id                  INT         primary key AUTO_INCREMENT,
     passengerlastname   varchar(255),
